@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thamara Helem | Gestora de Tráfego e Projetos</title>
+<meta name="description" content="Thamara Helem, gestora de tráfego sênior. Tráfego pago, gestão de projetos e neuromarketing aplicado para negócios de qualquer segmento.">
+<meta property="og:title" content="Thamara Helem | Gestora de Tráfego e Projetos">
+<meta property="og:description" content="Estratégias que falam com a decisão do seu cliente, não só com o algoritmo.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="theme-color" content="#081324">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#081324; --navy-2:#0D1D36; --navy-3:#132849; --line:rgba(201,170,124,.28);
+  --ivory:#F5F0E7; --ivory-2:#ECE4D6; --ink:#0B1626; --muted:#5B6575;
+  --brass:#C9AA7C; --brass-2:#E3CBA3; --brass-d:#9C7B4D;
+  --serif:'Fraunces', Georgia, serif; --sans:'Montserrat', system-ui, sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--navy);color:var(--ivory);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--brass)}
+.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+h2 em,h1 em{font-style:italic;color:var(--brass-2)}
+.light h2 em{color:var(--brass-d)}
+.rule{display:flex;align-items:center;gap:14px}
+.rule::before{content:"";width:42px;height:1px;background:var(--brass)}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:.88rem;letter-spacing:.04em;transition:.35s cubic-bezier(.2,.7,.2,1);cursor:pointer;border:0;font-family:var(--sans)}
+.btn-gold{background:linear-gradient(135deg,var(--brass-2),var(--brass) 55%,var(--brass-d));color:#1A1308;box-shadow:0 10px 30px -10px rgba(201,170,124,.55)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(201,170,124,.7)}
+.btn-ghost{border:1px solid var(--line);color:var(--ivory)}
+.btn-ghost:hover{border-color:var(--brass);background:rgba(201,170,124,.08)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s}
+header.solid{background:rgba(8,19,36,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,170,124,.14)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--serif);font-weight:400;font-size:1.45rem;letter-spacing:-.01em}
+.logo span{font-size:.58rem;letter-spacing:.42em;color:var(--brass);margin-top:6px;font-weight:600}
+.menu{display:flex;gap:34px;font-size:.82rem;font-weight:500;letter-spacing:.05em}
+.menu a{opacity:.78;transition:.3s;position:relative}
+.menu a:hover{opacity:1}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--brass);transition:.35s}
+.menu a:hover::after{width:100%}
+.nav .btn{padding:12px 22px;font-size:.78rem}
+.burger{display:none;background:none;border:0;color:var(--ivory);width:40px;height:40px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden;
+  background:radial-gradient(900px 600px at 78% 30%,rgba(35,72,128,.55),transparent 60%),radial-gradient(700px 500px at 10% 90%,rgba(201,170,124,.10),transparent 60%),var(--navy)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,170,124,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,170,124,.05) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);margin:26px 0 26px}
+.hero p.lead{font-size:1.08rem;color:rgba(245,240,231,.74);max-width:540px;font-weight:300}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
+.tags span{font-size:.72rem;letter-spacing:.08em;padding:8px 14px;border:1px solid rgba(201,170,124,.22);border-radius:999px;color:rgba(245,240,231,.75)}
+.portrait{position:relative;justify-self:end;width:min(440px,100%)}
+.portrait .arch{position:relative;border-radius:240px 240px 26px 26px;overflow:hidden;aspect-ratio:4/5.2;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.portrait .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.04);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.portrait:hover .arch img{transform:scale(1.08)}
+.portrait .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,19,36,.55))}
+.portrait .frame{position:absolute;inset:-16px -16px 16px 16px;border:1px solid var(--brass);border-radius:256px 256px 32px 32px;opacity:.55;pointer-events:none}
+.float{position:absolute;left:-70px;bottom:46px;max-width:250px;padding:20px 22px;border-radius:18px;background:rgba(13,29,54,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(0,0,0,.6);animation:flutua 6s ease-in-out infinite}
+.float small{display:block;font-size:.62rem;letter-spacing:.28em;color:var(--brass);font-weight:600;margin-bottom:8px}
+.float p{font-family:var(--serif);font-size:1.12rem;line-height:1.3;font-weight:300}
+.seal{position:absolute;right:-26px;top:38px;width:112px;height:112px;animation:gira 26s linear infinite}
+.seal text{font-size:9.2px;letter-spacing:3.4px;fill:var(--brass);font-family:var(--sans);font-weight:600}
+@keyframes flutua{50%{transform:translateY(-10px)}}
+@keyframes gira{to{transform:rotate(360deg)}}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:.62rem;letter-spacing:.34em;color:rgba(245,240,231,.45);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint::after{content:"";width:1px;height:38px;background:linear-gradient(var(--brass),transparent);animation:desce 2.2s ease-in-out infinite}
+@keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* faixa */
+.marquee{border-block:1px solid rgba(201,170,124,.16);background:var(--navy-2);overflow:hidden;padding:20px 0}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:corre 38s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:1.35rem;font-weight:300;white-space:nowrap;color:rgba(245,240,231,.85);display:flex;align-items:center;gap:56px}
+.marquee span::after{content:"";width:7px;height:7px;transform:rotate(45deg);background:var(--brass)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* seções claras */
+section{position:relative}
+.light{background:var(--ivory);color:var(--ink)}
+.light .eyebrow{color:var(--brass-d)}
+.light .rule::before{background:var(--brass-d)}
+.pad{padding:130px 0}
+
+/* manifesto */
+.manifesto{text-align:center}
+.manifesto blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,5.4vw,4.4rem);line-height:1.08;letter-spacing:-.02em;max-width:980px;margin:28px auto 0}
+.manifesto blockquote b{font-weight:600}
+.manifesto .sep{width:min(420px,70%);height:1px;background:var(--brass-d);margin:42px auto;opacity:.6}
+.manifesto p{font-size:1.25rem;max-width:620px;margin:0 auto;color:var(--muted)}
+.manifesto p strong{color:var(--ink)}
+.causas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:80px;text-align:left}
+.causa{padding:34px 30px;border-radius:var(--r);background:#fff;border:1px solid var(--ivory-2);transition:.4s}
+.causa:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(11,22,38,.35)}
+.causa i{font-style:normal;font-family:var(--serif);font-size:2.6rem;color:var(--brass-d);font-weight:300;line-height:1}
+.causa h3{font-size:1.45rem;margin:16px 0 10px}
+.causa p{font-size:.94rem;color:var(--muted)}
+.nota{margin-top:64px;font-size:.98rem;color:var(--muted)}
+.nota strong{color:var(--ink)}
+
+/* serviços */
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:64px}
+.head p{max-width:420px;color:rgba(245,240,231,.68);font-weight:300}
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;padding:44px 36px 40px;border-radius:var(--r);background:linear-gradient(180deg,var(--navy-2),var(--navy));border:1px solid rgba(201,170,124,.16);overflow:hidden;transition:.45s cubic-bezier(.2,.7,.2,1)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 260px at var(--mx,50%) var(--my,0%),rgba(201,170,124,.14),transparent 60%);opacity:0;transition:.4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,170,124,.45)}
+.card:hover::before{opacity:1}
+.card .ico{width:58px;height:58px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--brass);margin-bottom:30px}
+.card .ico svg{width:24px;height:24px}
+.card .num{position:absolute;top:30px;right:32px;font-family:var(--serif);font-size:.9rem;color:rgba(201,170,124,.6)}
+.card h3{font-size:1.75rem;margin-bottom:14px}
+.card p{color:rgba(245,240,231,.7);font-size:.95rem;font-weight:300}
+.card ul{list-style:none;margin-top:24px;display:grid;gap:10px}
+.card li{font-size:.86rem;display:flex;gap:12px;align-items:flex-start;color:rgba(245,240,231,.85)}
+.card li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;transform:rotate(45deg);border:1px solid var(--brass)}
+.aberto{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px 36px;border-radius:var(--r);border:1px dashed rgba(201,170,124,.35)}
+.aberto p{font-family:var(--serif);font-size:1.4rem;font-weight:300}
+.aberto p em{color:var(--brass-2)}
+
+/* compromissos */
+.comp{background:var(--navy-2);overflow:hidden}
+.comp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.comp-img{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1.05}
+.comp-img img{width:100%;height:100%;object-fit:cover}
+.comp-img::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 40%,rgba(8,19,36,.85))}
+.comp-img figcaption{position:absolute;left:30px;bottom:28px;right:30px;z-index:2;font-family:var(--serif);font-size:1.5rem;font-weight:300;line-height:1.2}
+.comp-img figcaption em{color:var(--brass-2)}
+.pilares{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:46px;border-top:1px solid rgba(201,170,124,.18)}
+.pilar{padding:30px 26px 30px 0;border-bottom:1px solid rgba(201,170,124,.18)}
+.pilar:nth-child(odd){border-right:1px solid rgba(201,170,124,.18)}
+.pilar:nth-child(even){padding-left:30px}
+.pilar h3{font-size:1.5rem;display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.pilar h3 svg{width:20px;height:20px;color:var(--brass)}
+.pilar p{font-size:.9rem;color:rgba(245,240,231,.68);font-weight:300}
+
+/* método */
+.metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:70px}
+.metodo-grid::before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:linear-gradient(90deg,var(--brass-d),rgba(156,123,77,.15))}
+.passo{padding-right:28px;position:relative}
+.passo .dot{width:56px;height:56px;border-radius:50%;background:var(--ivory);border:1px solid var(--brass-d);display:grid;place-items:center;font-family:var(--serif);font-size:1.1rem;color:var(--brass-d);position:relative;z-index:1;transition:.4s}
+.passo:hover .dot{background:var(--navy);color:var(--brass-2);border-color:var(--navy)}
+.passo h3{font-size:1.4rem;margin:26px 0 10px}
+.passo p{font-size:.92rem;color:var(--muted)}
+
+/* sobre */
+.sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center}
+.sobre-foto{position:relative}
+.sobre-foto img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%;filter:contrast(1.04)}
+.sobre-foto .tag{position:absolute;right:-24px;bottom:40px;background:var(--ivory);color:var(--ink);padding:16px 22px;border-radius:16px;font-size:.78rem;font-weight:600;letter-spacing:.06em;box-shadow:0 20px 40px -18px rgba(0,0,0,.6)}
+.sobre-foto .tag b{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;letter-spacing:0}
+.sobre h2{margin:22px 0 28px}
+.sobre p{color:rgba(245,240,231,.74);font-weight:300;margin-bottom:18px;max-width:600px}
+.citacao{margin:36px 0 0;padding:30px 0 0;border-top:1px solid rgba(201,170,124,.2);font-family:var(--serif);font-size:1.6rem;line-height:1.3;font-weight:300;font-style:italic}
+.citacao span{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.28em;color:var(--brass);font-weight:600}
+
+/* serra */
+.serra{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden}
+.serra img{position:absolute;inset:0;width:100%;height:120%;object-fit:cover;object-position:50% 40%;will-change:transform}
+.serra::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,19,36,.25),rgba(8,19,36,.92) 88%)}
+.serra .wrap{position:relative;z-index:2;padding:120px 0 90px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+.serra h2{font-size:clamp(2.2rem,5vw,4rem)}
+.serra p{color:rgba(245,240,231,.78);font-weight:300}
+
+/* conteúdo */
+.posts{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:60px}
+.post{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--ivory-2)}
+.post img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.post:hover img{transform:scale(1.06)}
+.post::after{content:"Ver no Instagram";position:absolute;inset:auto 0 0 0;padding:40px 14px 14px;font-size:.7rem;letter-spacing:.14em;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(8,19,36,.85));opacity:0;transition:.4s}
+.post:hover::after{opacity:1}
+
+/* contato */
+.contato{background:radial-gradient(800px 500px at 85% 10%,rgba(35,72,128,.45),transparent 60%),var(--navy)}
+.contato-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.contato h2{margin:22px 0 22px}
+.contato .info p{color:rgba(245,240,231,.72);font-weight:300;margin-bottom:30px}
+.mini{display:flex;align-items:center;gap:18px;padding:20px;border-radius:18px;border:1px solid rgba(201,170,124,.18);margin-top:16px;transition:.3s}
+.mini:hover{border-color:var(--brass)}
+.mini img{width:58px;height:58px;border-radius:50%;object-fit:cover}
+.mini b{display:block;font-weight:600}
+.mini span{font-size:.82rem;color:rgba(245,240,231,.6)}
+form.app{padding:44px 42px;border-radius:28px;background:linear-gradient(180deg,rgba(19,40,73,.75),rgba(13,29,54,.85));border:1px solid rgba(201,170,124,.22);box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+.app h3{font-size:1.7rem;margin-bottom:6px}
+.app .sub{font-size:.86rem;color:rgba(245,240,231,.6);margin-bottom:28px}
+.campo{margin-bottom:22px}
+.campo label,.campo .lb{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--brass);margin-bottom:10px}
+.campo input,.campo textarea{width:100%;background:rgba(8,19,36,.55);border:1px solid rgba(201,170,124,.2);border-radius:12px;padding:14px 16px;color:var(--ivory);font:inherit;font-size:.95rem;transition:.3s}
+.campo input:focus,.campo textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 4px rgba(201,170,124,.12)}
+.campo textarea{min-height:90px;resize:vertical}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{background:transparent;border:1px solid rgba(201,170,124,.25);color:rgba(245,240,231,.85);padding:10px 15px;border-radius:999px;font:inherit;font-size:.8rem;cursor:pointer;transition:.25s}
+.chips button:hover{border-color:var(--brass)}
+.chips button[aria-pressed="true"]{background:var(--brass);color:#1A1308;border-color:var(--brass);font-weight:600}
+.app .btn{width:100%;justify-content:center;margin-top:8px;padding:18px}
+.app .obs{font-size:.74rem;color:rgba(245,240,231,.5);margin-top:14px;text-align:center}
+.toast{visibility:hidden;opacity:0;position:fixed;left:50%;bottom:30px;transform:translate(-50%,140%);background:var(--ivory);color:var(--ink);padding:16px 24px;border-radius:14px;font-size:.88rem;font-weight:500;box-shadow:0 20px 50px -15px rgba(0,0,0,.6);transition:.5s cubic-bezier(.2,.7,.2,1);z-index:200;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0);visibility:visible;opacity:1}
+
+/* footer */
+footer{background:#050C18;padding:70px 0 40px;border-top:1px solid rgba(201,170,124,.12)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.foot .redes{display:flex;gap:12px}
+.foot .redes a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,170,124,.25);display:grid;place-items:center;transition:.3s}
+.foot .redes a:hover{background:var(--brass);color:#1A1308}
+.foot .redes svg{width:18px;height:18px}
+.copy{margin-top:46px;padding-top:26px;border-top:1px solid rgba(255,255,255,.06);font-size:.76rem;color:rgba(245,240,231,.4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}.js .rv.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+/* responsivo */
+@media (max-width:1000px){
+  .menu,.nav .btn{display:none}
+  .burger{display:grid;place-items:center}
+  header.aberto .menu{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;gap:0;background:rgba(8,19,36,.97);padding:10px 20px 24px;border-bottom:1px solid rgba(201,170,124,.15)}
+  header.aberto .menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .hero-grid,.comp-grid,.sobre-grid,.contato-grid,.serra .wrap{grid-template-columns:1fr;gap:56px}
+  .portrait{justify-self:center;width:min(380px,86%)}
+  .float{left:-18px}
+  .seal{right:-14px;width:94px;height:94px}
+  .servicos,.causas{grid-template-columns:1fr}
+  .head{flex-direction:column;align-items:flex-start}
+  .metodo-grid{grid-template-columns:1fr 1fr;gap:40px 0}
+  .metodo-grid::before{display:none}
+  .posts{grid-template-columns:repeat(3,1fr)}
+  .posts .post:nth-child(n+4){display:none}
+  .sobre-foto{max-width:460px}
+  .scroll-hint{display:none}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .pad{padding:90px 0}
+  .hero{padding-top:110px}
+  .hero .ctas .btn{width:100%;justify-content:center}
+  .eyebrow{letter-spacing:.22em}
+  .metodo-grid{grid-template-columns:1fr}
+  .pilares{grid-template-columns:1fr}
+  .pilar,.pilar:nth-child(even){padding:24px 0;border-right:0!important}
+  .posts{grid-template-columns:1fr 1fr}
+  .posts .post:nth-child(n+3){display:none}
+  .duo{grid-template-columns:1fr}
+  form.app{padding:32px 22px}
+  .aberto{flex-direction:column;align-items:flex-start;padding:26px}
+  .sobre-foto .tag{right:12px}
+  .float{max-width:210px;padding:16px 18px;bottom:24px}
+  .float p{font-size:1rem}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header id="topo">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Thamara Helem, início"><b>Thamara Helem</b><span>THM GESTÃO</span></a>
+    <nav class="menu" id="menu">
+      <a href="#base">A base</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Método</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#conteudo">Conteúdo</a>
+    </nav>
+    <a href="#contato" class="btn btn-gold">Agendar conversa</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow rule rv">Gestora de tráfego sênior</div>
+      <h1 class="rv d1">Estratégias que falam com a <em>decisão</em> do seu cliente, não só com o algoritmo.</h1>
+      <p class="lead rv d2">Tráfego pago, gestão de projetos e neuromarketing aplicado para negócios que querem crescer com clareza. Antes de escalar o investimento, a base fica pronta para receber atenção.</p>
+      <div class="ctas rv d3">
+        <a href="#contato" class="btn btn-gold">Quero uma análise do meu negócio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#servicos" class="btn btn-ghost">Ver como eu trabalho</a>
+      </div>
+      <div class="tags rv d3"><span>Tráfego pago</span><span>Gestão de projetos</span><span>Neuromarketing aplicado</span><span>Nicho aberto</span></div>
+    </div>
+    <div class="portrait rv d2">
+      <div class="frame"></div>
+      <div class="arch"><img src="img/hero.webp" alt="Thamara Helem, gestora de tráfego" fetchpriority="high"></div>
+      <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="58" fill="rgba(8,19,36,.85)" stroke="rgba(201,170,124,.45)"/><text><textPath href="#c">CLAREZA · ESTRATÉGIA · ENTREGA · </textPath></text><path d="M60 46l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#C9AA7C"/></svg>
+      <div class="float"><small>REGRA DA CASA</small><p>Antes de escalar anúncios, escale clareza.</p></div>
+    </div>
+  </div>
+  <div class="scroll-hint">ROLE</div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Tráfego pago</span><span>Posicionamento</span><span>Oferta bem estruturada</span><span>Gestão de projetos</span><span>Neuromarketing</span><span>Decisões com clareza</span>
+  <span>Tráfego pago</span><span>Posicionamento</span><span>Oferta bem estruturada</span><span>Gestão de projetos</span><span>Neuromarketing</span><span>Decisões com clareza</span>
+</div></div>
+
+<section class="light pad manifesto" id="base">
+  <div class="wrap">
+    <div class="eyebrow rv" style="display:inline-flex" >O que ninguém te conta sobre anúncio</div>
+    <blockquote class="rv d1"><b>Não é</b> o tráfego que vende.</blockquote>
+    <div class="sep rv"></div>
+    <p class="rv d1">É o que você <strong>entrega depois do clique</strong>.</p>
+    <div class="causas">
+      <div class="causa rv"><i>01</i><h3>Posicionamento fraco</h3><p>O anúncio chama a atenção, mas a pessoa não entende por que deveria escolher você e não o concorrente.</p></div>
+      <div class="causa rv d1"><i>02</i><h3>Oferta mal estruturada</h3><p>O clique acontece, a proposta não convence. A verba vira visita e não vira cliente.</p></div>
+      <div class="causa rv d2"><i>03</i><h3>Estratégia desalinhada</h3><p>Campanha de um lado, atendimento e processo de outro. Cada parte puxa para um lado e o resultado não aparece.</p></div>
+    </div>
+    <p class="nota rv">Não é falta de verba. Tráfego pago não é atalho, <strong>é potencializador</strong>. Só funciona quando o negócio está pronto para receber atenção.</p>
+  </div>
+</section>
+
+<section class="pad" id="servicos">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rule rv">Serviços</div><h2 class="rv d1" style="margin-top:20px">Três frentes,<br><em>uma mesma direção.</em></h2></div>
+      <p class="rv d2">Anúncio, processo e comunicação trabalhando juntos. Você acompanha com clareza e foca no que só você pode fazer pelo seu negócio.</p>
+    </div>
+    <div class="servicos">
+      <article class="card rv">
+        <span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Gestão de tráfego pago</h3>
+        <p>Campanhas pensadas para alcançar o público certo e levar até você quem tem real intenção de comprar.</p>
+        <ul><li>Estratégia de campanha alinhada à sua oferta</li><li>Público segmentado, sem desperdício de verba</li><li>Acompanhamento e ajuste contínuo</li></ul>
+      </article>
+      <article class="card rv d1">
+        <span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14h3M8 17h6"/></svg></div>
+        <h3>Gestão de projetos</h3>
+        <p>Organização que tira você do operacional. Processos claros, time alinhado e mais decisão do que reunião.</p>
+        <ul><li>Direção clara e prioridades definidas</li><li>Autonomia bem distribuída no time</li><li>Você volta a ser dona do seu tempo</li></ul>
+      </article>
+      <article class="card rv d2">
+        <span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.5 3a4.5 4.5 0 0 0-4.4 5.5A4 4 0 0 0 6 16h1v3a2 2 0 0 0 2 2h1"/><path d="M14.5 3a4.5 4.5 0 0 1 4.4 5.5A4 4 0 0 1 18 16h-1v3a2 2 0 0 1-2 2h-1"/><path d="M12 3v18"/></svg></div>
+        <h3>Neuromarketing aplicado</h3>
+        <p>Comunicação que considera como o cérebro do seu cliente decide. Do criativo do anúncio à forma de se apresentar.</p>
+        <ul><li>Criativos que param o dedo no feed</li><li>Mensagem que gera confiança</li><li>Relação que fideliza, não só empolga</li></ul>
+      </article>
+    </div>
+    <div class="aberto rv">
+      <p>Atendo negócios de <em>diferentes segmentos</em>. O que muda é a estratégia, não o cuidado.</p>
+      <a href="#contato" class="btn btn-ghost">Conversar sobre o meu</a>
+    </div>
+  </div>
+</section>
+
+<section class="comp pad">
+  <div class="wrap comp-grid">
+    <figure class="comp-img rv">
+      <img src="img/relogio.webp" alt="Relógio no pulso, detalhe" loading="lazy">
+      <figcaption>Ter uma gestora de projetos te torna <em>dona do seu tempo.</em></figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow rule rv">Como eu trabalho</div>
+      <h2 class="rv d1" style="margin-top:20px">Seu investimento em <em>boas mãos.</em></h2>
+      <div class="pilares">
+        <div class="pilar rv"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Segurança</h3><p>Cada real investido tem motivo. Nada de testar no escuro com o seu dinheiro.</p></div>
+        <div class="pilar rv d1"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Pontualidade</h3><p>O seu tempo é o recurso mais caro do negócio. Combinado é cumprido.</p></div>
+        <div class="pilar rv"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 12l3 3 5-6"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>Compromisso</h3><p>Constância no que foi combinado, mesmo quando ninguém está olhando.</p></div>
+        <div class="pilar rv d1"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 11l3-3a3 3 0 0 1 4 0l1 1"/><path d="M3 12l4-4 3 3M21 12l-4-4"/><path d="M8 15l2 2a2 2 0 0 0 3 0l4-4"/></svg>Confiança</h3><p>Comunicação clara, sem jargão. Você sabe o que está sendo feito e por quê.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light pad" id="metodo">
+  <div class="wrap">
+    <div class="eyebrow rule rv">Método</div>
+    <h2 class="rv d1" style="margin-top:20px;max-width:760px">Da base ao anúncio, <em>nessa ordem.</em></h2>
+    <div class="metodo-grid">
+      <div class="passo rv"><div class="dot">01</div><h3>Diagnóstico</h3><p>Olhar para o posicionamento, a oferta e o processo antes de qualquer investimento.</p></div>
+      <div class="passo rv d1"><div class="dot">02</div><h3>Estratégia</h3><p>Definir público, mensagem e objetivo. O que cada campanha precisa entregar.</p></div>
+      <div class="passo rv d2"><div class="dot">03</div><h3>Campanhas no ar</h3><p>Anúncios construídos para conversar com a decisão de quem vê, não só com o algoritmo.</p></div>
+      <div class="passo rv d3"><div class="dot">04</div><h3>Ajuste contínuo</h3><p>Acompanhar, ler os números e corrigir a rota. Escalar só o que comprovou resultado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad sobre" id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-foto rv">
+      <img src="img/sobre.webp" alt="Retrato de Thamara Helem" loading="lazy">
+      <div class="tag"><b>Thamara Helem</b>Tráfego · Projetos · Neuromarketing</div>
+    </div>
+    <div>
+      <div class="eyebrow rule rv">Quem cuida do seu projeto</div>
+      <h2 class="rv d1">Vivendo o digital <em>de forma leve.</em></h2>
+      <p class="rv d1">Sou a Thamara, gestora de tráfego e de projetos. Meu trabalho junta três coisas que costumam andar separadas: anúncio, organização e entendimento de como as pessoas decidem.</p>
+      <p class="rv d2">Uso o neuromarketing para que a estratégia fale com a decisão do seu cliente. E uso a gestão de projetos para que o seu negócio dê conta de receber o resultado que o tráfego traz.</p>
+      <p class="rv d2">Acredito em liderança que conecta, corrige com respeito e entrega com consistência.</p>
+      <blockquote class="citacao rv">"Eu não lidero pra provar. Lidero pra transformar. Com leveza, visão e estratégia."<span>THAMARA HELEM</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="serra">
+  <img src="img/escritorio.webp" alt="Notebook em uma mesa de madeira com vista para a serra" loading="lazy" id="parallax">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow rule">Da Serra Catarinense</div><h2 style="margin-top:20px">Estratégia pensada com calma, <em>executada com precisão.</em></h2></div>
+    <p class="rv d1">Leveza não é falta de seriedade. É ter processo, clareza e tempo para pensar no que realmente move o seu negócio.</p>
+  </div>
+</section>
+
+<section class="light pad" id="conteudo">
+  <div class="wrap">
+    <div class="head" style="margin-bottom:0">
+      <div><div class="eyebrow rule rv">No Instagram</div><h2 class="rv d1" style="margin-top:20px">Conteúdo para quem <em>decide.</em></h2></div>
+      <a href="https://www.instagram.com/thamarahelem/" target="_blank" rel="noopener" class="btn rv d2" style="background:var(--navy);color:var(--ivory)">Seguir @thamarahelem</a>
+    </div>
+    <div class="posts">
+      <a class="post rv" href="https://www.instagram.com/thamarahelem/p/DKslIEmRdLn/" target="_blank" rel="noopener"><img src="img/post-trafego.webp" alt="Post: Não é o tráfego que vende" loading="lazy"></a>
+      <a class="post rv d1" href="https://www.instagram.com/thamarahelem/p/DKk73nURuOc/" target="_blank" rel="noopener"><img src="img/post-gestao.webp" alt="Post: Gestão inteligente, como o neuromarketing pode transformar decisões e liderança" loading="lazy"></a>
+      <a class="post rv d2" href="https://www.instagram.com/thamarahelem/p/DK0dcYCRv8G/" target="_blank" rel="noopener"><img src="img/post-reuniao.webp" alt="Post: Você não precisa de mais uma reunião, precisa de clareza" loading="lazy"></a>
+      <a class="post rv d3" href="https://www.instagram.com/thamarahelem/reel/DLAfyQ_RZqH/" target="_blank" rel="noopener"><img src="img/post-conexao.webp" alt="Post: Conexão vende mais que argumento" loading="lazy"></a>
+      <a class="post rv d3" href="https://www.instagram.com/thamarahelem/p/DKiFxRVRWVS/" target="_blank" rel="noopener"><img src="img/post-processo.webp" alt="Post: Existe uma parte do processo que ninguém posta" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="pad contato" id="contato">
+  <div class="wrap contato-grid">
+    <div class="info">
+      <div class="eyebrow rule rv">Vamos conversar</div>
+      <h2 class="rv d1">Seu negócio merece uma estratégia <em>feita sob medida.</em></h2>
+      <p class="rv d2">Conte um pouco sobre o seu momento. Eu leio com atenção e respondo para marcarmos uma conversa.</p>
+      <a class="mini rv d2" href="https://www.instagram.com/thamarahelem/" target="_blank" rel="noopener">
+        <img src="img/retrato.webp" alt="Thamara Helem" loading="lazy">
+        <div><b>@thamarahelem</b><span>Tráfego pago · Gestão de projetos</span></div>
+      </a>
+    </div>
+    <form class="app rv d1" id="form" data-wa="" data-ig="thamarahelem" novalidate>
+      <h3>Aplicação para análise</h3>
+      <div class="sub">Leva menos de um minuto.</div>
+      <div class="duo">
+        <div class="campo"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+        <div class="campo"><label for="empresa">Empresa</label><input id="empresa" name="empresa" autocomplete="organization"></div>
+      </div>
+      <div class="campo"><label for="segmento">Segmento</label><input id="segmento" name="segmento" placeholder="Ex.: clínica, loja, restaurante, serviços"></div>
+      <div class="campo"><span class="lb">Você já anuncia?</span>
+        <div class="chips" data-campo="anuncia"><button type="button">Ainda não</button><button type="button">Sim, por conta própria</button><button type="button">Sim, com agência ou gestor</button></div>
+      </div>
+      <div class="campo"><span class="lb">O que você mais precisa agora</span>
+        <div class="chips" data-campo="foco" data-multi><button type="button">Mais clientes</button><button type="button">Organizar o negócio</button><button type="button">Melhorar a comunicação</button><button type="button">Escalar o que já funciona</button></div>
+      </div>
+      <div class="campo"><label for="msg">Algo mais que eu deva saber?</label><textarea id="msg" name="msg" placeholder="Opcional"></textarea></div>
+      <button class="btn btn-gold" type="submit">Enviar minha aplicação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <div class="obs" id="obs">Sua mensagem segue direto para a conversa com a Thamara.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#" class="logo"><b>Thamara Helem</b><span>THM GESTÃO</span></a>
+      <div class="redes"><a href="https://www.instagram.com/thamarahelem/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></div>
+    </div>
+    <div class="copy"><span>© 2026 Thamara Helem · THM Gestão</span><span>Tráfego pago · Gestão de projetos · Neuromarketing aplicado</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+(()=>{
+  const h=document.getElementById('topo');
+  const onS=()=>h.classList.toggle('solid',scrollY>30);onS();addEventListener('scroll',onS,{passive:true});
+  const b=document.getElementById('burger');
+  b.onclick=()=>{const o=h.classList.toggle('aberto');b.setAttribute('aria-expanded',o)};
+  document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>h.classList.remove('aberto'));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+
+  const px=document.getElementById('parallax');
+  if(px&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    addEventListener('scroll',()=>{const r=px.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;px.style.transform='translateY('+(-r.top*0.12-60)+'px)'},{passive:true});
+  }
+
+  document.querySelectorAll('.chips').forEach(g=>{
+    const multi=g.hasAttribute('data-multi');
+    g.querySelectorAll('button').forEach(bt=>{bt.setAttribute('aria-pressed','false');bt.onclick=()=>{
+      if(!multi)g.querySelectorAll('button').forEach(x=>x!==bt&&x.setAttribute('aria-pressed','false'));
+      bt.setAttribute('aria-pressed',bt.getAttribute('aria-pressed')==='true'?'false':'true');
+    }});
+  });
+
+  const f=document.getElementById('form'),t=document.getElementById('toast');
+  const toast=m=>{t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),5200)};
+  const sel=c=>[...f.querySelectorAll('[data-campo="'+c+'"] [aria-pressed="true"]')].map(x=>x.textContent).join(', ');
+  f.onsubmit=async e=>{
+    e.preventDefault();
+    const nome=f.nome.value.trim();
+    if(!nome){f.nome.focus();toast('Me conta seu nome para eu saber com quem falo.');return}
+    const linhas=['Olá, Thamara! Vim pelo seu site e quero uma análise do meu negócio.','','Nome: '+nome];
+    if(f.empresa.value.trim())linhas.push('Empresa: '+f.empresa.value.trim());
+    if(f.segmento.value.trim())linhas.push('Segmento: '+f.segmento.value.trim());
+    if(sel('anuncia'))linhas.push('Já anuncio: '+sel('anuncia'));
+    if(sel('foco'))linhas.push('Preciso de: '+sel('foco'));
+    if(f.msg.value.trim())linhas.push('','Sobre o momento: '+f.msg.value.trim());
+    const txt=linhas.join('\n');
+    const wa=f.dataset.wa.replace(/\D/g,'');
+    if(wa){window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(txt),'_blank','noopener');return}
+    try{await navigator.clipboard.writeText(txt);toast('Mensagem copiada. É só colar no Direct que abriu.')}catch(_){toast('Abrindo o Direct do Instagram.')}
+    setTimeout(()=>window.open('https://ig.me/m/'+f.dataset.ig,'_blank','noopener'),600);
+  };
+})();
+</script>
+</body>
+</html>
